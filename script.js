@@ -2,7 +2,7 @@ const computerSelection = computerPlay();
 
 const playerSelection = playerPlay();
 
-playRound(computerSelection, playerSelection);
+playGame(computerSelection, playerSelection);
 
 function computerPlay(){
     let x = Math.floor(Math.random() * 3);
@@ -19,12 +19,12 @@ function playerPlay(){
     return prompt("Enter your choice");
 }
 
-function playRound(computerSelection, playerSelection){
+function playGame(computerSelection, playerSelection){
     if(computerSelection == "rock" && playerSelection == "rock" ||  computerSelection == "paper" && playerSelection == "paper"  || computerSelection == "scissors" && playerSelection == "sciccors"){
         alert("tie!");
-    }else if(computerSelection == "rock" && playerSelection == "paper" || computerSelection == "scissors" && playerSelection == "rock"){
+    }else if(computerSelection == "rock" && playerSelection == "paper" || computerSelection == "scissors" && playerSelection == "rock" || computerSelection == "paper" && playerSelection == "scissors"){
         alert("player wins!");
-    }else if (computerSelection == "paper" && playerSelection == "rock" || computerSelection == "scissors" && playerSelection == "paper"){
+    }else if (computerSelection == "paper" && playerSelection == "rock" || computerSelection == "scissors" && playerSelection == "paper" || computerSelection == "rock" && playerSelection == "scissors"){
         alert("computer wins!");
     }else{
         alert("Enter correct choice!");
