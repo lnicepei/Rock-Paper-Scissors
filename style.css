@@ -1,7 +1,7 @@
 html{
     height: 100vh;
 }
-h1, .buttons{
+body{
     font-family: 'Raleway', sans-serif;
     height: 100%;
 }

@@ -14,6 +14,7 @@ computerScoreInsideScore.setAttribute("id", "computerscore");
 document.getElementById('btnScissors').style.cssText = "padding: 10px;  border-radius: 20px; border: 2px solid black; box-shadow: 15px 10px 10px grey;"
 document.getElementById('btnRock').style.cssText = "padding: 10px;  border-radius: 20px; border: 2px solid black; box-shadow: 15px 10px 10px grey;"
 document.getElementById('btnPaper').style.cssText = "padding: 10px;  border-radius: 20px; border: 2px solid black; box-shadow: 15px 10px 10px grey;"
+document.getElementById('score').style.cssText = "display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 10px;  border-radius: 20px; border: 2px solid black; box-shadow: 15px 10px 10px grey; margin: 50px"
 playerPlay();
 
 function computerPlay(){
@@ -47,7 +48,7 @@ function playerPlay(){
 
 function restartGame(){
     document.getElementById('score').appendChild(restartBtn);
-    document.getElementById('score').style.cssText = "display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 20px; background-color: yellow; border: 2px solid black";
+    document.getElementById('score').style.cssText = "display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 10px;  border-radius: 20px; border: 2px solid black; box-shadow: 15px 10px 10px grey; margin: 50px";
     // document.getElementById('restartbutton').style.cssText = "display: flex; justify-content: center; align-items: center; background-color: yellow;";
     document.getElementById('restartbutton').addEventListener('click', function remover(){
         
