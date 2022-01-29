@@ -3,6 +3,8 @@ restartBtn = document.createElement("button");
 restartBtn.innerHTML = "RESTART THE GAME";
 restartBtn.setAttribute("id", "restartbutton");
 
+
+
 const playerScoreInsideScore = document.createElement('div');
 playerScoreInsideScore.setAttribute("id", "playerscore");
 
@@ -27,7 +29,9 @@ function computerPlay(){
 }
 
 function playerPlay(){
-    
+    const scoreContainer = document.createElement('div');
+    scoreContainer.setAttribute("id", "score");
+    document.body.appendChild(scoreContainer);
     document.getElementById('score').appendChild(computerScoreInsideScore);
     document.getElementById('score').appendChild(playerScoreInsideScore);
     document.getElementById('playerscore').textContent = "Player score is " + playerScore;
@@ -47,7 +51,6 @@ function playerPlay(){
     document.getElementById('btnScissors').addEventListener('click', function(){
         playerSelection = "scissors";
         computerSelection = computerPlay();
-        console.log(computerSelection);
         playRound(computerSelection, playerSelection);
         return;
     });   
@@ -58,11 +61,12 @@ function restartGame(){
     document.getElementById('restartbutton').addEventListener('click', function(){
         playerScore = 0;
         computerScore = 0;
-        document.getElementById('score').appendChild(restartBtn);
+        //document.getElementById('score').appendChild(restartBtn);
         document.getElementById('score').removeChild(restartBtn);
         document.getElementById('score').textContent = "";
-        computerSelection = "";
-        playerSelection = "";
+        document.getElementById('score').remove();
+        // computerSelection = "";
+        // playerSelection = "";
         // document.getElementById('score').remove();
         // document.getElementById('btnScissors').removeEventListener('click', restartGame);
         // document.getElementById('btnRock').removeEventListener('click', restartGame);
@@ -71,6 +75,8 @@ function restartGame(){
         // document.getElementById('computerscore').remove();   
         // document.getElementById('score').removeChild(computerScoreInsideScore);
         // document.getElementById('score').removeChild(playerScoreInsideScore);
+        document.body.remove(scoreContainer);
+        document.body.appendChild(scoreContainer);
         // document.getElementById('computerscore').textContent.remove();
         playerPlay();
     });
