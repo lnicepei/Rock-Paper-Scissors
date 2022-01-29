@@ -1,15 +1,19 @@
 let computerSelection, playerSelection, computerScore = 0, playerScore = 0, restartBtn;
 
-restartBtn = document.createElement("button");
+restartBtn = document.createElement("div");
 restartBtn.innerHTML = "RESTART THE GAME";
 restartBtn.setAttribute("id", "restartbutton");
+// document.restartBtn.style.color = "red";
 
-const playerScoreInsideScore = document.createElement('div');
+let playerScoreInsideScore = document.createElement('div');
 playerScoreInsideScore.setAttribute("id", "playerscore");
+// document.playerScoreInsideScore.style.cssText = "display: flex; justify-content: center; align-items: center; flex-direction: column; margin-bottom: 20px; background-color: yellow;";
 
-const computerScoreInsideScore = document.createElement('div');
+let computerScoreInsideScore = document.createElement('div');
 computerScoreInsideScore.setAttribute("id", "computerscore");
-
+document.getElementById('btnScissors').style.cssText = "padding: 10px;  border-radius: 20px; border: 2px solid black; box-shadow: 15px 10px 10px grey;"
+document.getElementById('btnRock').style.cssText = "padding: 10px;  border-radius: 20px; border: 2px solid black; box-shadow: 15px 10px 10px grey;"
+document.getElementById('btnPaper').style.cssText = "padding: 10px;  border-radius: 20px; border: 2px solid black; box-shadow: 15px 10px 10px grey;"
 playerPlay();
 
 function computerPlay(){
@@ -24,12 +28,13 @@ function computerPlay(){
 }
 
 function playerPlay(){
-    const scoreContainer = document.createElement('div');
-    scoreContainer.setAttribute("id", "score");
-    document.body.appendChild(scoreContainer);
+    // const scoreContainer = document.createElement('div');
+    // scoreContainer.setAttribute("id", "score");
+    // document.body.appendChild(scoreContainer);
 
     document.getElementById('score').appendChild(computerScoreInsideScore);
     document.getElementById('score').appendChild(playerScoreInsideScore);
+    // document.getElementById('score').cssText = "display: flex; justify-content: center;"
 
     document.getElementById('playerscore').textContent = "Player score is " + playerScore;
     document.getElementById('computerscore').textContent = "Computer score is " + computerScore;
@@ -42,7 +47,10 @@ function playerPlay(){
 
 function restartGame(){
     document.getElementById('score').appendChild(restartBtn);
+    document.getElementById('score').style.cssText = "display: flex; justify-content: center; align-items: center; flex-direction: column; margin: 20px; background-color: yellow; border: 2px solid black";
+    // document.getElementById('restartbutton').style.cssText = "display: flex; justify-content: center; align-items: center; background-color: yellow;";
     document.getElementById('restartbutton').addEventListener('click', function remover(){
+        
         playerScore = 0;
         computerScore = 0;
         
@@ -107,4 +115,3 @@ function remover3(){
     playRound(computerSelection, playerSelection);
     return;
 }
-
