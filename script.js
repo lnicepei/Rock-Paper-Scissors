@@ -83,13 +83,25 @@ function playRound(computerSelection, playerSelection){
         document.getElementById('computerscore').textContent = "Computer score is " + computerScore;
 
     }else if(computerScore == 3){
-        document.getElementById('results').textContent = "";
+        document.getElementById('results').textContent = "Computer wins";
         document.getElementById('score').textContent = "";
+        resultsOfTheRound.textContent = "";
+
+        document.getElementById('btnScissors').removeEventListener('click', remover1);
+        document.getElementById('btnRock').removeEventListener('click', remover2);
+        document.getElementById('btnPaper').removeEventListener('click', remover3);
+        computerScore = 100;
 
         restartGame();
     }else if(playerScore == 3){
         document.getElementById('score').textContent = "";
-        document.getElementById('results').textContent = "";
+        document.getElementById('results').textContent = "Player wins";
+        resultsOfTheRound.textContent = "";
+
+        document.getElementById('btnScissors').removeEventListener('click', remover1);
+        document.getElementById('btnRock').removeEventListener('click', remover2);
+        document.getElementById('btnPaper').removeEventListener('click', remover3);
+        playerScore = 100;
 
         restartGame();
     }
