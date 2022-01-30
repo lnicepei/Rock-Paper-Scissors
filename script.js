@@ -9,9 +9,6 @@ playerScoreInsideScore.setAttribute("id", "playerscore");
 
 let computerScoreInsideScore = document.createElement('div');
 computerScoreInsideScore.setAttribute("id", "computerscore");
-document.getElementById('btnScissors').style.cssText = "height: 100px; width: 100px; display: flex; justify-content: center; align-items: center; padding: 10px;  border-radius: 100px; border: 1px solid grey; box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20);	-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; "
-document.getElementById('btnRock').style.cssText = "height: 100px; width: 100px; display: flex; justify-content: center; align-items: center; padding: 10px;  border-radius: 100px; border: 1px solid grey; box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; "
-document.getElementById('btnPaper').style.cssText = "height: 100px; width: 100px; display: flex; justify-content: center; align-items: center; padding: 10px;  border-radius: 100px; border: 1px solid grey; box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20); -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; "
 document.getElementById('score').style.cssText = "display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 10px;  border-radius: 5px; border: 1px solid grey; box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20); margin: 50px"
 
 let resultsOfTheRound = document.createElement('div');
@@ -49,7 +46,7 @@ function playerPlay(){
 function restartGame(){
 
     document.getElementById('score').appendChild(restartBtn);
-    document.getElementById('score').style.cssText = "display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 10px;  border-radius: 5px; border: 1px solid grey; box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20); margin: 50px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;";
+    // document.getElementById('score').style.cssText = "display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 10px;  border-radius: 5px; border: 1px solid grey; box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20); margin: 50px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;";
     document.getElementById('restartbutton').addEventListener('click', function remover(){
         
         playerScore = 0;

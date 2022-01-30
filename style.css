@@ -18,12 +18,33 @@ body{
     flex-direction: row;
     margin-bottom: auto;
 }
-.score{
+/* #score{
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 100px;
-}
+} */
 .restartbutton{
   margin: 120px;
+}
+#btnRock, #btnScissors, #btnPaper{
+    height: 100px; 
+    width: 100px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px;  
+    border-radius: 100px; 
+    border: 1px solid grey; 
+    box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20); 
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    transition: 0.4s;
+}
+#btnRock:hover, #btnScissors:hover, #btnPaper:hover{
+    transform: scale(1.1);
 }
