@@ -83,8 +83,7 @@ function playRound(computerSelection, playerSelection){
         document.getElementById('computerscore').textContent = "Computer score is " + computerScore;
 
     }else if(computerScore == 3){
-        document.getElementById('results').textContent = "Computer wins";
-        document.getElementById('score').textContent = "";
+        document.getElementById('score').textContent = "Computer wins";
         resultsOfTheRound.textContent = "";
 
         document.getElementById('btnScissors').removeEventListener('click', remover1);
@@ -94,8 +93,7 @@ function playRound(computerSelection, playerSelection){
 
         restartGame();
     }else if(playerScore == 3){
-        document.getElementById('score').textContent = "";
-        document.getElementById('results').textContent = "Player wins";
+        document.getElementById('score').textContent = "Player wins";
         resultsOfTheRound.textContent = "";
 
         document.getElementById('btnScissors').removeEventListener('click', remover1);
