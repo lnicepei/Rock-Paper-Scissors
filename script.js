@@ -66,14 +66,14 @@ function playRound(computerSelection, playerSelection){
 
     if(computerSelection == "rock" && playerSelection == "rock" ||  computerSelection == "paper" && playerSelection == "paper"  || computerSelection == "scissors" && playerSelection == "scissors"){
         resultsOfTheRound.textContent = "tie";
-        document.getElementById('score').appendChild(resultsOfTheRound);
+        document.body.appendChild(resultsOfTheRound);
     }else if(computerSelection == "rock" && playerSelection == "paper" || computerSelection == "scissors" && playerSelection == "rock" || playerSelection == "scissors" && computerSelection == "paper"){
         resultsOfTheRound.textContent = "player wins";
-        document.getElementById('score').appendChild(resultsOfTheRound);
+        document.body.appendChild(resultsOfTheRound);
         playerScore++;
     }else if (computerSelection == "paper" && playerSelection == "rock" || computerSelection == "scissors" && playerSelection == "paper" || computerSelection == "rock" && playerSelection == "scissors"){
         resultsOfTheRound.textContent = "computer wins";
-        document.getElementById('score').appendChild(resultsOfTheRound);
+        document.body.appendChild(resultsOfTheRound);
         computerScore++;
     }
 
@@ -83,11 +83,13 @@ function playRound(computerSelection, playerSelection){
         document.getElementById('computerscore').textContent = "Computer score is " + computerScore;
 
     }else if(computerScore == 3){
-        document.getElementById('score').textContent = "COMPUTER WINS";
+        document.getElementById('results').textContent = "";
+        document.getElementById('score').textContent = "";
 
         restartGame();
     }else if(playerScore == 3){
-        document.getElementById('score').textContent = "PLAYER WINS";
+        document.getElementById('score').textContent = "";
+        document.getElementById('results').textContent = "";
 
         restartGame();
     }
