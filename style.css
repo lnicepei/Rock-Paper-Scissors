@@ -18,6 +18,9 @@ body{
     flex-direction: row;
     margin-bottom: auto;
 }
+h1{
+    
+}
 #score{
     display: flex; 
     justify-content: center; 
@@ -35,9 +38,31 @@ body{
     -ms-user-select: none; 
     user-select: none;
 }
-.restartbutton{
-  margin: 120px;
+#restartbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
 }
+#restartbutton:hover {
+    color: #000;
+  }
+
+#restartbutton::before {
+    content: "";
+    /* position: absolute;
+    display: block; */
+    width: 100%;
+    height: 2px;
+    /* bottom: 0;
+    left: 0; */
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+#restartbutton:hover::before {
+    transform: scaleX(1);
+  }
 #btnRock, #btnScissors, #btnPaper{
     height: 90px; 
     width: 90px; 

@@ -1,4 +1,4 @@
-let computerSelection, playerSelection, computerScore = 0, playerScore = 0, restartBtn;
+let computerSelection, playerSelection, computerScore = 0, playerScore = 0, restartBtn, index;
 
 restartBtn = document.createElement("div");
 restartBtn.innerHTML = "RESTART THE GAME";
@@ -30,6 +30,8 @@ function computerPlay(){
 
 function playerPlay(){
 
+    index = 1;
+
     document.getElementById('score').appendChild(computerScoreInsideScore);
     document.getElementById('score').appendChild(playerScoreInsideScore);
 
@@ -45,6 +47,7 @@ function playerPlay(){
 function restartGame(){
 
     document.getElementById('score').appendChild(restartBtn);
+    index = 0;
     document.getElementById('restartbutton').addEventListener('click', function remover(){
         
         playerScore = 0;
@@ -57,6 +60,8 @@ function restartGame(){
         document.getElementById('btnRock').removeEventListener('click', remover2);
         document.getElementById('btnPaper').removeEventListener('click', remover3);
 
+        index = 0;
+        
         playerPlay();
     });
 
@@ -83,23 +88,25 @@ function playRound(computerSelection, playerSelection){
         document.getElementById('computerscore').textContent = "Computer score is " + computerScore;
 
     }else if(computerScore == 3){
+
         document.getElementById('score').textContent = "Computer wins";
         resultsOfTheRound.textContent = "";
 
         document.getElementById('btnScissors').removeEventListener('click', remover1);
         document.getElementById('btnRock').removeEventListener('click', remover2);
         document.getElementById('btnPaper').removeEventListener('click', remover3);
-        computerScore = 100;
+        index *= 0;
 
         restartGame();
     }else if(playerScore == 3){
+
         document.getElementById('score').textContent = "Player wins";
         resultsOfTheRound.textContent = "";
 
         document.getElementById('btnScissors').removeEventListener('click', remover1);
         document.getElementById('btnRock').removeEventListener('click', remover2);
         document.getElementById('btnPaper').removeEventListener('click', remover3);
-        playerScore = 100;
+        index *= 0;
 
         restartGame();
     }
@@ -108,27 +115,39 @@ function playRound(computerSelection, playerSelection){
 
 function remover1(){
 
-    playerSelection = "rock";
-    computerSelection = computerPlay();
-    playRound(computerSelection, playerSelection);
-    return;
+    if(index != 0){
+
+        playerSelection = "rock";
+        computerSelection = computerPlay();
+        playRound(computerSelection, playerSelection);
+        return;
+
+    }
 
 }
 
 function remover2(){
 
-    playerSelection = "paper";
-    computerSelection = computerPlay();
-    playRound(computerSelection, playerSelection);
-    return;
+    if(index != 0){
+
+        playerSelection = "paper";
+        computerSelection = computerPlay();
+        playRound(computerSelection, playerSelection);
+        return;
+
+    }
 
 }
 
 function remover3(){
 
-    playerSelection = "scissors";
-    computerSelection = computerPlay();
-    playRound(computerSelection, playerSelection);
-    return;
+    if(index != 0){
+
+        playerSelection = "scissors";
+        computerSelection = computerPlay();
+        playRound(computerSelection, playerSelection);
+        return;
+
+    }
 
 }
