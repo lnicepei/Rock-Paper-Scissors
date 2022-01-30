@@ -18,9 +18,6 @@ body{
     flex-direction: row;
     margin-bottom: auto;
 }
-.btnRock{
-    border: 10px solid red;
-}
 .score{
     display: flex;
     align-items: center;
