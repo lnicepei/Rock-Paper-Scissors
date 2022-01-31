@@ -48,6 +48,7 @@ function restartGame(){
 
     document.getElementById('score').appendChild(restartBtn);
     index = 0;
+    document.getElementById('score').style.fontWeight = "normal";
     document.getElementById('restartbutton').addEventListener('click', function remover(){
         
         playerScore = 0;
@@ -89,6 +90,7 @@ function playRound(computerSelection, playerSelection){
 
     }else if(computerScore == 3){
 
+        document.getElementById('score').style.fontWeight = "bold";
         document.getElementById('score').textContent = "Computer wins";
         resultsOfTheRound.textContent = "";
 
@@ -100,6 +102,7 @@ function playRound(computerSelection, playerSelection){
         restartGame();
     }else if(playerScore == 3){
 
+        document.getElementById('score').style.fontWeight = "bold";
         document.getElementById('score').textContent = "Player wins";
         resultsOfTheRound.textContent = "";
 

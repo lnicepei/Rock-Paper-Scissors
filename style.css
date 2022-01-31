@@ -40,6 +40,7 @@ h1{
     -moz-user-select: none; 
     -ms-user-select: none; 
     user-select: none;
+    transition: all 0.5s linear;
 }
 #restartbutton{
     display: flex;
@@ -100,8 +101,3 @@ h1{
         opacity: 0;
       }
   }
-/* #restartholder{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
